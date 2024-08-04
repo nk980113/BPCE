@@ -1,0 +1,10 @@
+{
+	"use bevy::prelude::*;": {
+		"prefix": "importbevy",
+		"body": "use bevy::prelude::*;"
+	},
+	"use components::*;": {
+		"prefix": "importcomponents",
+		"body": "use components::*;"
+	}
+}
