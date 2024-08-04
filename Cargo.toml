@@ -5,6 +5,9 @@ edition = "2021"
 
 [dependencies]
 bevy = "0.14.1"
+bevy-persistent = { version = "0.6.0", features = ["all"] }
+bevy_file_dialog = "0.6.0"
+dirs = "5.0.1"
 
 [profile.dev]
 opt-level = 1
