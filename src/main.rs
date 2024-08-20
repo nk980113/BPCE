@@ -1,7 +1,10 @@
 use bevy::{prelude::*, window::PrimaryWindow};
 
 mod file_select;
+use bevy_simple_scroll_view::ScrollViewPlugin;
 use file_select::FileSelectPlugin;
+
+mod utils;
 
 fn main() {
     App::new()
@@ -15,6 +18,7 @@ fn main() {
                 }),
                 ..Default::default()
             }),
+            ScrollViewPlugin,
             FileSelectPlugin,
         ))
         .add_systems(Startup, (

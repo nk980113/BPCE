@@ -6,5 +6,17 @@
 	"use components::*;": {
 		"prefix": "importcomponents",
 		"body": "use components::*;"
-	}
+	},
+	"mod components;...": {
+		"prefix": "createcomponents",
+		"body": "mod components;$0\nuse components::*;"
+	},
+	"use styles::*;": {
+		"prefix": "importstyles",
+		"body": "use styles::*;"
+	},
+	"mod styles;...": {
+		"prefix": "createstyles",
+		"body": "mod styles;$0\nuse styles::*;"
+	},
 }
