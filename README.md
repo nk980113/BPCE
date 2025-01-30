@@ -4,3 +4,5 @@
 This project is very WIP.
 
 Contributions are welcomed.
+
+Join our [Discord Server](https://discord.gg/SybKCNuduN) for more details.
