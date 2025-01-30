@@ -1,10 +1,5 @@
-use bevy::{prelude::*, window::PrimaryWindow};
-
-mod file_select;
-use bevy_simple_scroll_view::ScrollViewPlugin;
-use file_select::FileSelectPlugin;
-
-mod utils;
+use bevy::prelude::*;
+use bevy::window::PrimaryWindow;
 
 fn main() {
     App::new()
@@ -12,14 +7,12 @@ fn main() {
             DefaultPlugins.set(WindowPlugin {
                 primary_window: Some(Window {
                     title: "BPCE".to_owned(),
-                    mode: bevy::window::WindowMode::BorderlessFullscreen,
+                    mode: bevy::window::WindowMode::BorderlessFullscreen(MonitorSelection::Current),
                     resizable: false,
                     ..Default::default()
                 }),
                 ..Default::default()
             }),
-            ScrollViewPlugin,
-            FileSelectPlugin,
         ))
         .add_systems(Startup, (
             spawn_camera,
@@ -29,7 +22,7 @@ fn main() {
 }
 
 fn spawn_camera(mut commands: Commands) {
-    commands.spawn(Camera2dBundle::default());
+    commands.spawn(Camera2d);
 }
 
 fn configure_buttons(mut window: Query<&mut Window, With<PrimaryWindow>>) {
