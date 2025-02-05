@@ -1,4 +1,23 @@
+[package]
+name = "bpce"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "0.15.1"
+bevy-persistent = { version = "0.7.0", features = ["all"] }
+bevy_file_dialog = { git = "https://github.com/richardhozak/bevy_file_dialog" }
+dirs = "6.0.0"
+rand = "0.9.0"
+zip = "2.1.6"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
 [workspace]
 members = [
-    "bpce",
+    "packages/*",
 ]
