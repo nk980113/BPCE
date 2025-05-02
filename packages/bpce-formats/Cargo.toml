@@ -1,6 +1,14 @@
 [package]
 name = "bpce-formats"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
+chrono = { version = "0.4.39", features = ["serde"] }
+displaydoc = "0.2.5"
+postcard = { version = "1.1.1", features = ["use-std"] }
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.138"
+serde_yml = "0.0.12"
+thiserror = "2.0.11"
+zip = "2.2.2"

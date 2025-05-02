@@ -1,14 +1,18 @@
 [package]
 name = "bpce"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
-bevy = "0.15.1"
+bevy = "0.15.2"
 bevy-persistent = { version = "0.7.0", features = ["all"] }
 bevy_file_dialog = { git = "https://github.com/richardhozak/bevy_file_dialog" }
 dirs = "6.0.0"
+postcard = { version = "1.1.1", features = ["use-std"] }
 rand = "0.9.0"
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.138"
+serde_yaml = "0.9.34"
 zip = "2.1.6"
 
 [profile.dev]
